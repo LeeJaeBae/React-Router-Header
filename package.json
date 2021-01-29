@@ -1,6 +1,6 @@
 {
   "name": "react-router-header",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "React Header with React-Router",
   "main": "dist/index.js",
   "repository": "https://github.com/LeeJaeBae/React-Header",
