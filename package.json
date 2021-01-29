@@ -1,19 +1,36 @@
 {
-  "name": "react_header",
-  "version": "0.0.1",
+  "name": "react-router-header",
+  "version": "0.0.5",
   "description": "React Header with React-Router",
-  "main": "dist/react-header.min.js",
+  "main": "dist/index.js",
   "repository": "https://github.com/LeeJaeBae/React-Header",
   "author": {
     "name": "LeeJaeWon",
     "email": "nea4182@gmail.com",
     "url": "https://github.com/LeeJaeBae"
   },
+  "scripts": {
+    "build": "npx babel lib -d dist"
+  },
   "license": "MIT",
   "private": false,
   "dependencies": {
+    "react": "^17.0.1",
     "react-router-dom": "^5.2.0"
   },
-  "files": ["dist", "lib", "examples"],
-  "keywords": ["react", "header", "react-router"]
+  "files": [
+    "dist",
+    "lib",
+    "examples"
+  ],
+  "keywords": [
+    "react",
+    "header",
+    "react-router"
+  ],
+  "devDependencies": {
+    "@babel/cli": "^7.12.10",
+    "@babel/core": "^7.12.10",
+    "@babel/preset-react": "^7.12.10"
+  }
 }
