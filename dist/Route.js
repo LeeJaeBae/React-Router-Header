@@ -20,7 +20,7 @@ Route.prototype.components = [];
 Route.prototype.count = 0;
 
 Route.prototype.add = function (path, name, component, exact) {
-  Route.prototype.components.add({
+  Route.prototype.add({
     path: path,
     name: name,
     component: component,
