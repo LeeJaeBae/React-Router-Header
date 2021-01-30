@@ -1,6 +1,6 @@
 {
   "name": "react-router-header",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "React Header with React-Router",
   "main": "dist/index.js",
   "repository": "https://github.com/LeeJaeBae/React-Router-Header",
@@ -31,6 +31,7 @@
   "devDependencies": {
     "@babel/cli": "^7.12.10",
     "@babel/core": "^7.12.10",
+    "@babel/preset-env": "^7.12.11",
     "@babel/preset-react": "^7.12.10"
   }
 }
