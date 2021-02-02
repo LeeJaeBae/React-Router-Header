@@ -8,9 +8,13 @@ Using [npm](https://www.npmjs.com/):
 
     $ npm install --save react-router-header
 
+or Using [yarn](https://yarnpkg.com/)
+
+    $ yarn add react-router-header
+
 ```js
 // using ES6 modules
-import {Routes, Route} from "react-router-header";
+import {Routes} from "react-router-header";
 
 // ES6 미만 지원 시에만 작성
 // // using CommonJS modules

@@ -1,7 +1,15 @@
 import React from "react";
-import {RoutesComponent} from "./Routes.d";
 
-export class RouteComponent implements RoutesComponent {
+
+export interface RouteComponent {
+    name: string;
+    path: string;
+    components: React.FC | React.Component | React.ComponentElement<any, any>;
+    exact?: boolean;
+}
+
+
+export class RoutesComponent implements RouteComponent {
     constructor(Component: React.FC | React.Component, path: string, name: string, exact: boolean) {
         this.name = name;
         this.path = path;

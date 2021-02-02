@@ -17,11 +17,11 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var react_1 = __importDefault(require("react"));
 var react_router_dom_1 = require("react-router-dom");
 var Routes_1 = __importDefault(require("./Routes"));
-var Router = function () {
-    return (react_1.default.createElement(react_1.default.Fragment, null,
+var DefaultRouter = function () {
+    return (react_1.default.createElement(react_router_dom_1.BrowserRouter, null,
         react_1.default.createElement(react_router_dom_1.Switch, null, Routes_1.default.Components.map(function (C, i) {
             return react_1.default.createElement(react_router_dom_1.Route, __assign({}, C, { key: i }));
         }))));
 };
-exports.default = Router;
-//# sourceMappingURL=Router.js.map
+exports.default = DefaultRouter;
+//# sourceMappingURL=DefaultRouter.js.map

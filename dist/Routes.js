@@ -6,24 +6,27 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var react_1 = __importDefault(require("react"));
 var react_router_dom_1 = require("react-router-dom");
 var Router_1 = __importDefault(require("./Router"));
-var RouteComponent_1 = require("./RouteComponent");
+var RoutesComponent_1 = require("./RoutesComponent");
+var DefaultRouter_1 = __importDefault(require("./DefaultRouter"));
 var Routes = /** @class */ (function () {
     function Routes(routerSetting) {
         if (routerSetting === "hash") {
             Routes.Router = function () {
-                return react_1.default.createElement(react_router_dom_1.HashRouter, null);
+                return react_1.default.createElement(react_router_dom_1.HashRouter, null,
+                    react_1.default.createElement(Router_1.default, null));
             };
         }
         else {
             Routes.Router = function () {
-                return react_1.default.createElement(react_router_dom_1.BrowserRouter, null);
+                return react_1.default.createElement(react_router_dom_1.BrowserRouter, null,
+                    react_1.default.createElement(Router_1.default, null));
             };
         }
     }
-    Routes.Router = Router_1.default;
+    Routes.Router = DefaultRouter_1.default;
     Routes.add = function (Component, path, name, exact) {
         if (exact === void 0) { exact = false; }
-        var component = new RouteComponent_1.RouteComponent(Component, path, name, exact);
+        var component = new RoutesComponent_1.RoutesComponent(Component, path, name, exact);
         Routes.Components.push(component);
     };
     return Routes;

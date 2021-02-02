@@ -1,11 +1,12 @@
 import React from "react";
 import {BrowserRouter, HashRouter} from "react-router-dom";
 import Router from "./Router";
-import {RouteComponent} from "./RouteComponent";
-import {RoutesComponent} from "./Routes.d";
+import {RoutesComponent} from "./RoutesComponent";
+import DefaultRouter from "./DefaultRouter";
+
 
 class Routes {
-    static Router: React.FC<{}> = Router;
+    static Router: React.FC<{}> = DefaultRouter;
 
     static Components: RoutesComponent[];
 
@@ -13,18 +14,20 @@ class Routes {
         if (routerSetting === "hash") {
             Routes.Router = () => {
                 return <HashRouter>
+                    <Router/>
                 </HashRouter>
             }
         } else {
             Routes.Router = () => {
                 return <BrowserRouter>
+                    <Router/>
                 </BrowserRouter>;
             }
         }
     }
 
     static add = (Component: React.FC | React.Component, path: string, name: string, exact: boolean = false) => {
-        const component: RouteComponent = new RouteComponent(Component, path, name, exact);
+        const component: RoutesComponent = new RoutesComponent(Component, path, name, exact);
         Routes.Components.push(component);
     }
 }
