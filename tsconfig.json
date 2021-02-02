@@ -20,7 +20,7 @@
     // "outFile": "./",                       /* Concatenate and emit output to single file. */
     "outDir": "./dist",
     /* Redirect output structure to the directory. */
-    "rootDir": "./lib",
+    //    "rootDir": "",
     /* Specify the root directory of input files. Use to control the output directory structure with --outDir. */
     // "composite": true,                     /* Enable project compilation */
     // "tsBuildInfoFile": "./",               /* Specify file to store incremental compilation information */
@@ -63,7 +63,7 @@
     // "allowUmdGlobalAccess": true,          /* Allow accessing UMD globals from modules. */
 
     /* Source Map Options */
-    "sourceRoot": "",
+    "sourceRoot": "lib",
     /* Specify the location where debugger should locate TypeScript files instead of source locations. */
     // "mapRoot": "",                         /* Specify the location where debugger should locate map files instead of generated locations. */
     // "inlineSourceMap": true,               /* Emit a single file with source maps instead of having a separate file. */

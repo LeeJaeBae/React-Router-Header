@@ -1,10 +1,1 @@
-{
-  "version": 3,
-  "file": "index.js",
-  "sourceRoot": "",
-  "sources": [
-    "../lib/index.ts"
-  ],
-  "names": [],
-  "mappings": ";;AAEA,OAAO,CAAC,GAAG,CAAC,MAAM,CAAC,CAAC"
-}
+{"version":3,"file":"index.js","sourceRoot":"lib/","sources":["index.tsx"],"names":[],"mappings":";;;;;AAAA,oDAA8B;AAE9B,kBAAe,gBAAM,CAAC"}
