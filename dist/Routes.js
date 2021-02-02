@@ -23,7 +23,8 @@ var Routes = /** @class */ (function () {
             };
         }
     }
-    Routes.Router = DefaultRouter_1.default;
+    Routes.Router = function () { return react_1.default.createElement(DefaultRouter_1.default, null); };
+    Routes.Components = [];
     Routes.add = function (Component, path, name, exact) {
         if (exact === void 0) { exact = false; }
         var component = new RoutesComponent_1.RoutesComponent(Component, path, name, exact);
