@@ -5,7 +5,7 @@ var RoutesComponent = /** @class */ (function () {
     function RoutesComponent(Component, path, name, exact) {
         this.name = name;
         this.path = path;
-        this.components = Component;
+        this.component = Component;
         this.exact = exact;
     }
     return RoutesComponent;

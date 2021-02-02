@@ -23,12 +23,27 @@ var Routes = /** @class */ (function () {
             };
         }
     }
+    ;
     Routes.Router = function () { return react_1.default.createElement(DefaultRouter_1.default, null); };
     Routes.Components = [];
     Routes.add = function (Component, path, name, exact) {
         if (exact === void 0) { exact = false; }
         var component = new RoutesComponent_1.RoutesComponent(Component, path, name, exact);
-        Routes.Components.push(component);
+        var flag = true;
+        Routes.Components.map(function (v) {
+            if (flag) {
+                flag = v.name !== name;
+            }
+        });
+        if (flag) {
+            Routes.Components.push(component);
+        }
+    };
+    // tslint:disable-next-line:ban-types
+    Routes.render = function (target) {
+        target.map(function (v) {
+            v();
+        });
     };
     return Routes;
 }());

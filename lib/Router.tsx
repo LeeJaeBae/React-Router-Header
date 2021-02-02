@@ -6,12 +6,13 @@ const Router: React.FC = () => {
     return (
         <>
             <Switch>
-                {Routes.Components.map((C, i) => {
-                    return <Route {...C} key={i}/>
-                })}
+                {
+                    Routes.Components.map((v, i) => <Route {...v} key={`route-${i}`}/>)
+                }
             </Switch>
         </>
     )
 }
+
 
 export default Router;

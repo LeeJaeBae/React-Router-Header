@@ -10,7 +10,7 @@ class Routes {
 
     static Components: RoutesComponent[] = [];
 
-    constructor(routerSetting: string) {
+    constructor(routerSetting?: string) {
         if (routerSetting === "hash") {
             Routes.Router = () => {
                 return <HashRouter>
@@ -24,11 +24,26 @@ class Routes {
                 </BrowserRouter>;
             }
         }
+    };
+
+    static add = (Component: React.FC, path: string, name: string, exact: boolean = false) => {
+        const component: RoutesComponent = new RoutesComponent(Component, path, name, exact);
+        let flag: boolean = true;
+        Routes.Components.map(v => {
+            if (flag) {
+                flag = v.name !== name;
+            }
+        })
+        if (flag) {
+            Routes.Components.push(component);
+        }
     }
 
-    static add = (Component: React.FC | React.Component, path: string, name: string, exact: boolean = false) => {
-        const component: RoutesComponent = new RoutesComponent(Component, path, name, exact);
-        Routes.Components.push(component);
+    // tslint:disable-next-line:ban-types
+    static render = (target: Function[]) => {
+        target.map(v => {
+            v();
+        })
     }
 }
 
