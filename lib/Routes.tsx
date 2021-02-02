@@ -6,9 +6,9 @@ import DefaultRouter from "./DefaultRouter";
 
 
 class Routes {
-    static Router: React.FC<{}> = DefaultRouter;
+    static Router: React.FC<{}> = () => <DefaultRouter/>;
 
-    static Components: RoutesComponent[];
+    static Components: RoutesComponent[] = [];
 
     constructor(routerSetting: string) {
         if (routerSetting === "hash") {
