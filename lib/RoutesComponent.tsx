@@ -10,7 +10,7 @@ export interface RouteComponent {
 
 
 export class RoutesComponent implements RouteComponent {
-    constructor(Component: React.FC, path: string, name: string, exact: boolean) {
+    constructor(Component: React.FC | any, path: string, name: string, exact: boolean) {
         this.name = name;
         this.path = path;
         this.component = Component;

@@ -1,32 +1,155 @@
-# React Header
+# React-router-header
 
-The customized header with [react-router-dom](https://www.npmjs.com/package/react-router-dom)
+---
+
+React Header ui component for react with react-router.
+
+[![NPM version][npm-image]][npm-url]
+[![npm download][download-image]][download-url]
+[![bundle size][bundlephobia-image]][bundlephobia-url]
+
+[npm-image]: http://img.shields.io/npm/v/react-router-header.svg?style=flat-square
+
+[npm-url]: http://npmjs.org/package/react-router-header
+
+[download-image]: https://img.shields.io/npm/dm/react-router-header.svg?style=flat-square
+
+[download-url]: https://npmjs.org/package/react-router-header
+
+[bundlephobia-url]: https://bundlephobia.com/result?p=react-router-header
+
+[bundlephobia-image]: https://badgen.net/bundlephobia/minzip/react-router-header
+
+## Install
+
+[![rc-checkbox](https://nodei.co/npm/react-router-header.png)](https://npmjs.org/package/react-router-header)
 
 ## Installation
 
-Using [npm](https://www.npmjs.com/):
+``` shell
+npm install --save react-router-header
 
-    $ npm install --save react-router-header
+or
 
-or Using [yarn](https://yarnpkg.com/)
-
-    $ yarn add react-router-header
-
-```js
-// using ES6 modules
-import {Routes} from "react-router-header";
-
-// ES6 미만 지원 시에만 작성
-// // using CommonJS modules
-// const Routes = require("react-router-header").Routes;
-// const Route = require("react-router-header").Route;
+yarn add react-router-header
 ```
 
-## Issues
+## Development
 
-If you find a bug, please file an issue
-on [our issue tracker on GitHub](https://github.com/LeeJaeBae/React-Router-Header/issues).
+```
+npm install
+npm start
+```
 
-## Credits
+## Usage
 
-React Router is built and maintained by [React Training](https://reacttraining.com).
+```js
+import Routes, {useRouter} from 'react-router-header';
+
+const Component = () => <></>;
+
+const router = useRouter();
+
+
+/**
+ * @param Component
+ * @param path
+ * @param name
+ * @param exact
+ */
+router.add(Component, "/path", "name", true)
+
+export default () => <Routes.Router/>;
+```
+
+## Routes Class's static properties
+
+> !!! => in progressed.
+<table class="table table-bordered table-striped">
+  <thead>
+  <tr>
+    <th style="width: 100px;">name</th>
+    <th style="width: 50px;">type</th>
+    <th style="width: 50px;">default</th>
+    <th>description</th>
+  </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Router</td>
+      <td>React.FC</td>
+      <td>DefaultRouter</td>
+      <td>return functional component with BrowserRouter</td>
+    </tr>
+    <tr>
+      <td>!!! Header</td>
+      <td>React.FC</td>
+      <td></td>
+      <td>return functional component</td>
+    </tr>
+      <tr>
+      <td>Components</td>
+      <td>RoutesComponent[]</td>
+      <td>[]</td>
+      <td>Array for RoutesComponent's element</td>
+    </tr>
+  </tbody>
+</table>
+
+## Routes API
+
+> !!! => in progressed.
+<table class="table table-bordered table-striped">
+  <thead>
+  <tr>
+    <th style="width: 100px;">name</th>
+    <th style="width: 50px;">return</th>
+    <th style="width: 50px;">parameters</th>
+    <th>description</th>
+  </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>add</td>
+      <td>void</td>
+      <td>Component:React.FC
+          path:string,
+          name:string,
+          exact:boolean = false
+</td>
+      <td>set a component in Routes</td>
+    </tr>
+    <tr>
+      <td>render</td>
+      <td>void</td>
+      <td>Function[]</td>
+      <td>call functions in argument</td>
+    </tr>
+  </tbody>
+</table>
+
+# Version History
+
+## 0.1.9
+
+---
+
+We make a Routes Class with React Router.
+
+Now we are going to making header with UI ASAP.
+
+We're always waiting for your advices or feedback!
+
+
+---
+
+## License
+
+react-router-header is released under the MIT license.
+
+## Contributor
+
+<a href="https://github.com/LeeJaeBae/React-Router-Header/graphs/contributors">
+  <img src="https://github.com/leejaebae.png?size=50">
+  <img src="https://github.com/JeongJaeSoon.png?size=50">
+</a>

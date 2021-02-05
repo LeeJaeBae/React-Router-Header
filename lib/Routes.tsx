@@ -3,11 +3,12 @@ import {BrowserRouter, HashRouter} from "react-router-dom";
 import Router from "./Router";
 import {RoutesComponent} from "./RoutesComponent";
 import DefaultRouter from "./DefaultRouter";
+import Header from "./Header";
 
 
 class Routes {
-    static Router: React.FC<{}> = () => <DefaultRouter/>;
-
+    static Router: React.FC = () => <DefaultRouter/>;
+    static Header: React.FC = () => <Header/>
     static Components: RoutesComponent[] = [];
 
     constructor(routerSetting?: string) {
