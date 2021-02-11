@@ -6,8 +6,9 @@ function App() {
 
 	return (
 		<>
-			<Routes.Header />
-			<Routes.Router />
+			<Routes.Router>
+				<Routes.Header />
+			</Routes.Router>
 		</>
 	);
 }
