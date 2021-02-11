@@ -8,6 +8,7 @@ var react_router_dom_1 = require("react-router-dom");
 var Router_1 = __importDefault(require("./Router"));
 var RoutesComponent_1 = require("./RoutesComponent");
 var DefaultRouter_1 = __importDefault(require("./DefaultRouter"));
+var Header_1 = __importDefault(require("./Header"));
 var Routes = /** @class */ (function () {
     function Routes(routerSetting) {
         if (routerSetting === "hash") {
@@ -25,6 +26,7 @@ var Routes = /** @class */ (function () {
     }
     ;
     Routes.Router = function () { return react_1.default.createElement(DefaultRouter_1.default, null); };
+    Routes.Header = function () { return react_1.default.createElement(Header_1.default, null); };
     Routes.Components = [];
     Routes.add = function (Component, path, name, exact) {
         if (exact === void 0) { exact = false; }
