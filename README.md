@@ -134,7 +134,7 @@ export default () => <Routes.Router/>;
 Build Type Declaration files.
 
 ---
-## 0.1.11
+## 0.2.0
 
 ---
 Header's Prototype version is completed
