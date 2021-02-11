@@ -11,20 +11,19 @@ var DefaultRouter_1 = __importDefault(require("./DefaultRouter"));
 var Header_1 = __importDefault(require("./Header"));
 var Routes = /** @class */ (function () {
     function Routes(routerSetting) {
-        if (routerSetting === "hash") {
+        if (routerSetting === 'hash') {
             Routes.Router = function () {
-                return react_1.default.createElement(react_router_dom_1.HashRouter, null,
-                    react_1.default.createElement(Router_1.default, null));
+                return (react_1.default.createElement(react_router_dom_1.HashRouter, null,
+                    react_1.default.createElement(Router_1.default, null)));
             };
         }
         else {
             Routes.Router = function () {
-                return react_1.default.createElement(react_router_dom_1.BrowserRouter, null,
-                    react_1.default.createElement(Router_1.default, null));
+                return (react_1.default.createElement(react_router_dom_1.BrowserRouter, null,
+                    react_1.default.createElement(Router_1.default, null)));
             };
         }
     }
-    ;
     Routes.Router = function () { return react_1.default.createElement(DefaultRouter_1.default, null); };
     Routes.Header = function () { return react_1.default.createElement(Header_1.default, null); };
     Routes.Components = [];
@@ -35,6 +34,9 @@ var Routes = /** @class */ (function () {
         Routes.Components.map(function (v) {
             if (flag) {
                 flag = v.name !== name;
+            }
+            else {
+                console.log('[Error] each router has to take other names');
             }
         });
         if (flag) {

@@ -1,5 +1,5 @@
-import React from "react";
-import { RoutesComponent } from "./RoutesComponent";
+import React from 'react';
+import { RoutesComponent } from './RoutesComponent';
 declare class Routes {
     static Router: React.FC;
     static Header: React.FC;

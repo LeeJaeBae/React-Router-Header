@@ -64,7 +64,6 @@ export default () => <Routes.Router/>;
 
 ## Routes Class's static properties
 
-> !!! => in progressed.
 <table class="table table-bordered table-striped">
   <thead>
   <tr>
@@ -82,7 +81,7 @@ export default () => <Routes.Router/>;
       <td>return functional component with BrowserRouter</td>
     </tr>
     <tr>
-      <td>!!! Header</td>
+      <td>Header</td>
       <td>React.FC</td>
       <td></td>
       <td>return functional component</td>
@@ -98,7 +97,6 @@ export default () => <Routes.Router/>;
 
 ## Routes API
 
-> !!! => in progressed.
 <table class="table table-bordered table-striped">
   <thead>
   <tr>
@@ -134,6 +132,12 @@ export default () => <Routes.Router/>;
 
 ---
 Build Type Declaration files.
+
+---
+## 0.1.11
+
+---
+Header's Prototype version is completed
 
 ---
 ## License
