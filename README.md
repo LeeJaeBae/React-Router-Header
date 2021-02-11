@@ -140,6 +140,12 @@ Build Type Declaration files.
 Header's Prototype version is completed
 
 ---
+## 0.2.1
+
+---
+small bug fix
+
+---
 ## License
 
 react-router-header is released under the MIT license.
