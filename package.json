@@ -1,11 +1,14 @@
 {
-	"name": "react-router-header",
-	"version": "0.2.4",
+	"name": "@leejaebae/react-router-header",
+	"version": "0.0.0",
 	"description": "React Header with React-Router",
 	"main": "dist/index.js",
-	"repository": "https://github.com/LeeJaeBae/React-Router-Header",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/LeeJaeBae/React-Router-Header"
+	},
 	"author": {
-		"name": "LeeJaeWon",
+		"name": "leejaebae",
 		"email": "nea4182@gmail.com",
 		"url": "https://github.com/LeeJaeBae"
 	},
