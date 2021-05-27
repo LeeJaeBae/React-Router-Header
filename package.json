@@ -1,6 +1,6 @@
 {
 	"name": "react-router-header",
-	"version": "0.2.3",
+	"version": "0.2.31",
 	"description": "React Header with React-Router",
 	"main": "dist/index.js",
 	"repository": "https://github.com/LeeJaeBae/React-Router-Header",
@@ -54,5 +54,8 @@
 			"js",
 			"ts"
 		]
+	},
+	"publishConfig": {
+		"registry": "https://npm.pkg.github.com"
 	}
 }
